@@ -1,0 +1,21 @@
+
+<div class = "flex flex-col w-md mx-auto container flex flex-col items-center gap-y-6 mt-10">       
+    <h2 class = "font-semibold text-2xl text-slate-700">Add New Expense</h2> 
+
+    <form action = "/add" method = "POST" class = "flex flex-row gap-x-6 w-full justify-center items-end">      
+        <div class = "flex flex-col items-start gap-y-2 w-1/4">   
+            <label for="desc" class = "text-lg">Product</label>
+            <input type="text" name = "desc" class = "px-4 py-2 w-full border border-slate-500 rounded-md" required />  
+        </div>
+
+        <div class = "flex flex-col items-start gap-y-2 w-1/4">    
+            <label for="amount" class = "text-lg">Price</label>
+            <input type="number" name = "amount" class="[appearance:textfield] w-full [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none px-4 py-2 border border-slate-500 rounded-md" required />   
+        </div>
+
+        <div>
+            <button type = "submit" class = "px-4 py-2 rounded-md shadow-md shadow-slate-300 bg-red-200 text-lg">Add</button> 
+        </div>
+    </form> 
+
+</div>

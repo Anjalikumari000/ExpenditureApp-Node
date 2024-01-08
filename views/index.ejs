@@ -1,0 +1,35 @@
+<main class = "container mx-auto flex flex-col items-center mt-20">  
+    <h2 class = "text-xl">Introducing the Ultimate</h2>
+    <h1 class = "text-3xl my-5">Expense Tracking Application</h1>
+
+    <%- include("./partials/addForm") %> 
+
+    <div class = "w-1/2 mt-10"> 
+        <div class = "grid grid-cols-2 w-full bg-slate-800 py-2 text-lg text-white">    
+            <h3 class = "text-center border-r-2 border-slate-100">Product</h3>
+            <h3 class = "text-center">Price</h3>
+        </div>
+
+        <% if(locals.expenses!=null) { %>
+            <% expenses.forEach(exp => { %>
+                <div class = "grid grid-cols-2 my-1 w-full bg-slate-500 py-2 text-lg text-white border-b-2 border-slate-100">    
+                    <h3 class = "text-center border-r-2  border-slate-100"><%= exp.desc %></h3>
+                    <h3 class = "text-center border-slate-100"><%= exp.amount %></h3> 
+                </div>
+            <% }) %>  
+            
+            <% if(locals.sum!=null) { %>
+
+                <div class = "grid grid-cols-2 my-1 w-full bg-teal-500 py-2 text-lg text-black border-b-2 border-slate-100">    
+                    <h3 class = "text-center border-r-2  border-slate-100">Total Expenditure</h3>
+                    <h3 class = "text-center border-slate-100"><%= sum %></h3> 
+                </div>
+
+            <% } %>
+
+        <% } %>
+
+        
+
+    </div>
+</main>
